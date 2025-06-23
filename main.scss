@@ -133,7 +133,6 @@ footer {
 }
 @media (min-width: 718px) {
   body {
-    border: 1px tomato solid;
     nav {
       padding: 24px 44px;
     }
@@ -172,9 +171,6 @@ footer {
   }
 }
 @media (min-width: 1024px) {
-  body {
-    border: blue 1px solid;
-  }
   .hero {
     margin-left: 80px;
     height: 964px;
