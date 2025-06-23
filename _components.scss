@@ -4,7 +4,7 @@ $blue-900: #13183f;
 $blue-600: #666ca3;
 $pink-600: #f74780;
 $pink-300: #ffa7c3;
-$gray: #83869a;
+$grey: #83869a;
 $white: white;
 
 %gradient-pink {
@@ -46,7 +46,7 @@ $white: white;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 18px;
   line-height: 150%;
-  font-weight: 500;
+  font-weight: 100;
 }
 
 %text-6 {
@@ -83,12 +83,12 @@ $white: white;
   @extend %text-6;
 }
 
-%button-black {
+%button-blue {
   @extend %button;
-  background-color: black;
+  background-color: $blue-900;
   color: white;
 }
-%button-black:hover {
+%button-blue:hover {
   background-color: $blue-600;
 }
 
@@ -122,6 +122,7 @@ $white: white;
 %button-purple:hover {
   color: white;
   position: relative;
+
   .a-overlay {
     position: absolute;
     padding: 0;
@@ -131,14 +132,15 @@ $white: white;
     height: 100%;
     background-color: #ffffff;
     opacity: 0.5;
+    border-radius: 28px;
   }
 }
 
-%button-black-mobile {
-  @extend %button-black;
+%button-blue-mobile {
+  @extend %button-blue;
   @extend %button-mobile;
 }
-%button-black-mobile:hover {
+%button-blue-mobile:hover {
   background-color: $blue-600;
 }
 
@@ -178,16 +180,4 @@ $white: white;
     background-color: #ffffff;
     opacity: 0.5;
   }
-}
-
-%button-link {
-  color: $pink-600;
-  @extend %text-7;
-}
-%buntton-link:hover {
-  color: $pink-300;
-  @extend %text-7;
-}
-
-%logo {
 }

@@ -1,4 +1,199 @@
 @use "components";
-a {
-  @extend %button-purple-mobile;
+
+$blue-900: #13183f;
+$blue-600: #666ca3;
+$pink-600: #f74780;
+$pink-300: #ffa7c3;
+$grey: #83869a;
+$white: white;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #faf9f6;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 91px;
+  padding: 16px 20px;
+  a {
+    position: relative;
+    z-index: 10;
+    @extend %button-blue;
+  }
+}
+.hero {
+  background-color: #faf9f6;
+  padding: 64px 20px;
+  height: 825px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .text-hero {
+    width: 328px;
+    height: 317px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h2 {
+    @extend %text-2;
+  }
+  a {
+    @extend %button-orange;
+  }
+  p {
+    @extend %text-5;
+  }
+  .img {
+    content: url("/assets/image-hero-mobile.png");
+    width: 335px;
+    height: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.content {
+  height: 2018px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 64px 20px;
+  background-color: #faf9f6;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 122px;
+    padding: 32px;
+    border-radius: 15px;
+    color: white;
+    @extend %text-4;
+    @extend %gradient-pink;
+  }
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  border-radius: 15px;
+  background-color: white;
+  padding: 64px 32px;
+  filter: drop-shadow(0 0 0.75rem $grey);
+  a {
+    color: $pink-600;
+    @extend %text-7;
+  }
+  a:hover {
+    color: $pink-300;
+    @extend %text-7;
+  }
+  img {
+    width: 56px;
+    position: absolute;
+    top: -20px;
+  }
+  h3 {
+    @extend %text-4;
+  }
+  p {
+    @extend %text-6;
+    color: $grey;
+  }
+}
+footer {
+  background-color: $blue-900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+  padding: 24px 44px;
+  img {
+    width: 79.29px;
+    height: 20px;
+  }
+  a {
+    @extend %button-purple;
+  }
+}
+@media (min-width: 718px) {
+  body {
+    border: 1px tomato solid;
+    nav {
+      padding: 24px 44px;
+    }
+    .hero {
+      flex-direction: row;
+      position: relative;
+      height: 528px;
+      justify-content: space-between;
+      padding-left: 44px;
+      .img {
+        content: url("assets/image-hero-desktop@2x.png");
+        position: absolute;
+        top: -150px;
+        right: -300px;
+        width: 740px;
+        height: 640px;
+      }
+    }
+    .content {
+      display: flex;
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      h2 {
+        filter: drop-shadow(0 0 0.75rem grey);
+        align-self: flex-end;
+        width: 350px;
+        height: 300px;
+      }
+      .card {
+        margin-top: 32px;
+        width: 350px;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    border: blue 1px solid;
+  }
+  .hero {
+    margin-left: 80px;
+    height: 964px;
+  }
+  #img {
+    width: 900px;
+    height: auto;
+    top: -250px;
+    right: -200px;
+  }
+  body .content {
+    padding: 80px 144px;
+    height: 956px;
+    align-content: space-around;
+  }
+  .text-hero {
+    h2,
+    p {
+      width: 544px;
+    }
+  }
 }
