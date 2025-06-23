@@ -145,12 +145,16 @@ nav a {
   flex-direction: column;
   justify-content: space-between;
 }
+.hero img {
+  visibility: hidden;
+}
 .hero .img {
   content: url("assets/image-hero-mobile.png");
   width: 335px;
   height: 320px;
   display: block;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .content {
@@ -192,7 +196,8 @@ nav a {
 .card img {
   width: 56px;
   position: absolute;
-  top: -20px;
+  top: -30px;
+  left: 30px;
 }
 .card p {
   color: #83869a;
@@ -211,38 +216,44 @@ footer img {
   height: 20px;
 }
 @media (min-width: 718px) {
-  body nav {
-    padding: 24px 44px;
+  .img {
+    visibility: hidden;
   }
-  body .hero {
+  img {
+    visibility: visible;
+  }
+  nav {
+    padding: 16px 124px;
+  }
+  .hero {
     flex-direction: row;
     position: relative;
     height: 528px;
     justify-content: space-between;
     padding-left: 44px;
   }
-  body .hero .img {
-    content: url("assets/image-hero-desktop@2x.png");
+  .hero img {
+    visibility: visible;
     position: absolute;
+    width: 937px;
     top: -150px;
-    right: -300px;
-    width: 740px;
-    height: 640px;
+    right: -200px;
+    overflow: hidden;
   }
-  body .content {
+  .content {
     display: flex;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
   }
-  body .content h2 {
+  .content h2 {
     filter: drop-shadow(0 0 0.75rem grey);
     align-self: flex-end;
     width: 350px;
     height: 300px;
   }
-  body .content .card {
+  .content .card {
     margin-top: 32px;
     width: 350px;
   }
@@ -250,10 +261,12 @@ footer img {
 @media (min-width: 1024px) {
   .hero {
     margin-left: 80px;
-    height: 964px;
+    height: auto;
+    margin-bottom: 64px;
   }
-  #img {
-    width: 900px;
+  img {
+    max-width: 100%;
+    overflow: hidden;
     height: auto;
     top: -250px;
     right: -200px;
