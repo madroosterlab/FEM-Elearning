@@ -146,7 +146,7 @@ nav a {
   justify-content: space-between;
 }
 .hero .img {
-  content: url("/assets/image-hero-mobile.png");
+  content: url("assets/image-hero-mobile.png");
   width: 335px;
   height: 320px;
   display: block;
