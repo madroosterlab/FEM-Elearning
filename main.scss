@@ -197,8 +197,8 @@ footer {
   }
   body .content {
     padding: 80px 144px;
-    height: 956px;
-    align-content: space-around;
+    height: auto;
+    overflow: hidden;
   }
   .text-hero {
     h2,
